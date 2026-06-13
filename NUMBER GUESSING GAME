@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main() {
+    int number;
+    srand(time(NULL));
+    int random=rand()%101;
+    printf("guess the number!!: ");
+    scanf("%d",&number);
+    
+    while(number!=random){
+    if(number>random){
+        printf("NOT CORRECT!!\n the number is less than that!!\n");
+        printf("guess the number!!: ");
+        scanf("%d",&number);
+    }
+    else{
+         printf("NOT CORRECT!!\n the number is greater than that!!\n");
+        printf("guess the number!!: ");
+        scanf("%d",&number);
+    }
+        }
+        
+   printf("YEAHHH!!! YOU GUESSED IT RIGHT THE NUMBER WAS: ");
+    printf("%d",random);
+    return 0;
+}
